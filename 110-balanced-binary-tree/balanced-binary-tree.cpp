@@ -12,7 +12,7 @@
 class Solution {
 private : 
     int dfsHeight(TreeNode *node){
-        if(!node) return 0;
+        if(node == NULL) return 0;
 
         int leftHeight = dfsHeight(node->left);
         if(leftHeight == -1) return -1;
