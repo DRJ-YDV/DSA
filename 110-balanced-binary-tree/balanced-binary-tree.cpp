@@ -10,7 +10,7 @@
  * };
  */
 class Solution {
-public:
+private : 
     int dfsHeight(TreeNode *node){
         if(!node) return 0;
 
@@ -24,6 +24,7 @@ public:
 
         return 1 + max(leftHeight , rightHeight);
     }
+public :
     bool isBalanced(TreeNode* root) {
         return dfsHeight(root) != -1;
     }
