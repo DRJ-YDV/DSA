@@ -7,7 +7,7 @@ public:
             unordered_set<int> vis;
             int cnt[2] = {0, 0}; // cnt[0] = distinct evens, cnt[1] = distinct odds
             for (int j = i; j < n; ++j) {
-                if (!vis.count(nums[j])) {
+                if (vis.count(nums[j])==0) {
                     vis.insert(nums[j]);
                     cnt[nums[j] % 2]++; // increment odd/even count
                 }
