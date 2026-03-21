@@ -5,9 +5,9 @@ public:
             return 0;
         vector<bool> check(n + 1, true);
         int cnt = 0;
-        for (int i = 2; i <= n / 2; i++) {
+        for (int i = 2; i*i < n ; i++) {
             if (check[i] == true) {
-                for (int j = 2 * i; j <= n; j += i) {
+                for (int j = i * i; j <= n; j += i) {
                     check[j] = false;
                 }
             }
