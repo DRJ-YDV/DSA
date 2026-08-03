@@ -23,20 +23,19 @@ public:
         //     }
         // }
         // return s;
-        string str = s;
         int k=s.size()-1;
         int i=0;
         while(i<k){
-            while(i<k && !present(str[i])){
+            while(i<k && !present(s[i])){
                 i++;
             }
-            while(i<k && !present(str[k])){
+            while(i<k && !present(s[k])){
                 k--;
             }
-        swap(str[i],str[k]);
+        swap(s[i],s[k]);
          i++;
          k--;
         }
-        return str;
+        return s;
     }
 };
