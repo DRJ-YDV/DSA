@@ -1,8 +1,6 @@
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
-        // sort(t.begin(),t.end());
-        // sort(s.begin(),s.end());
         if(s=="") return true;
         if(t=="") return false;
         int j=0,i=0;
