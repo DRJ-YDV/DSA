@@ -6,11 +6,7 @@ public:
         sort(g.begin(), g.end());
         sort(s.begin(),s.end());
         while (j < s.size() && i < g.size()) {
-            if (g[i] == s[j]) {
-                cnt++;
-                i++;
-                j++;
-            } else if (g[i]<=s[j]) {
+            if (g[i]<=s[j]) {
                 cnt++;
                 j++;
                 i++;
