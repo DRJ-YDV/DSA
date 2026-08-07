@@ -29,19 +29,19 @@ public:
             return 0;
         }
         sort(nums.begin(), nums.end());
-        int currentConsecutiveSequence = 1;
-        int longestConsecutiveSequence = 0;
+        int current = 1;
+        int longest = 0;
         for(int i=1; i<n; i++){
             if(nums[i] != nums[i-1]){
                 if(nums[i] == nums[i-1] + 1){
-                    currentConsecutiveSequence++;
+                    current++;
                 }
                 else{
-                    longestConsecutiveSequence = max(longestConsecutiveSequence, currentConsecutiveSequence);
-                    currentConsecutiveSequence = 1;
+                    longest = max(longest, current);
+                    current = 1;
                 }
             }
         }
-        return max(longestConsecutiveSequence, currentConsecutiveSequence);
+        return max(longest, current);
    }
 };
