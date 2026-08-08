@@ -1,11 +1,4 @@
 class Solution {
-private:
-    bool valid(int i, int j, int k) {
-        if ((i + j) > k || (j + k) > i || (i + k) > j)
-            return true;
-        return false;
-    }
-
 public:
     int triangleNumber(vector<int>& nums) {
         sort(nums.begin(), nums.end());
