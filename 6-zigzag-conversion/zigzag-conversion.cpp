@@ -11,19 +11,15 @@ public:
             x=0;
             for(int j=i;j<s.length();){
                 ans.push_back(s[j]);
+                if(k==0 || l==0){
+                    j+=k+l;
+                    continue;
+                }
                 if(x==0){
-                    if(k==0){
-                        j+=l;
-                        continue;
-                    }
                     j+=k;
                     x=1;
                 }
                 else{
-                    if(l==0){
-                        j+=k;
-                        continue;
-                    }
                     j+=l;
                     x=0;
                 }
