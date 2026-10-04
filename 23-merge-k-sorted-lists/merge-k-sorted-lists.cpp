@@ -21,8 +21,13 @@ public:
         for(auto node: lists){
             if(node!=NULL) pq.push(node);
         }
-        ListNode dummy(0);
-        ListNode* tail=&dummy;
+        if(pq.empty()) return NULL;
+        ListNode* head=pq.top();
+        pq.pop();
+
+        ListNode* tail=head;
+        if(tail->next != NULL) pq.push(tail->next);
+
         while(!pq.empty()){
             ListNode* node=pq.top();
             pq.pop();
@@ -30,6 +35,6 @@ public:
             tail=tail->next;
             if(node->next != NULL) pq.push(node->next);
         }
-        return dummy.next;
+        return head;
     }
 };
