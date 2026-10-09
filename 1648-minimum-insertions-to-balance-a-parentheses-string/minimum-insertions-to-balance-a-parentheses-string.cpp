@@ -23,7 +23,7 @@ public:
                 }
             }
         }
-        if(!st.empty()) ans+= 2*st.size();
+        ans+= 2*st.size();
         return ans;
     }
 };
