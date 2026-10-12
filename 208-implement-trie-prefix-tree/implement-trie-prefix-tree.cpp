@@ -1,13 +1,13 @@
 class TrieNode{
   public:
     char data;
-    TrieNode* character[26];
+    TrieNode* children[26];
     bool isTerminal;
 
     TrieNode(char ch){
         data=ch;
         for(int i=0;i<26;i++){
-            character[i]=NULL;
+            children[i]=NULL;
         }
         isTerminal=false;
     }
@@ -25,12 +25,12 @@ public:
         }
         int index=word[0]-'a';
         TrieNode* child;
-        if(root->character[index] != NULL){
-            child=root->character[index];
+        if(root->children[index] != NULL){
+            child=root->children[index];
         }
         else{
             child=new TrieNode(word[0]);
-            root->character[index]=child;
+            root->children[index]=child;
         }
         insertUtil(child,word.substr(1));
     }
@@ -44,8 +44,8 @@ public:
         }
         int index=word[0]-'a';
         TrieNode* child;
-        if(root->character[index] != NULL){
-            child=root->character[index];
+        if(root->children[index] != NULL){
+            child=root->children[index];
         }
         else return false;
 
@@ -61,8 +61,8 @@ public:
         }
         int index=word[0]-'a';
         TrieNode* child;
-        if(root->character[index] != NULL){
-            child=root->character[index];
+        if(root->children[index] != NULL){
+            child=root->children[index];
         }
         else return false;
 
