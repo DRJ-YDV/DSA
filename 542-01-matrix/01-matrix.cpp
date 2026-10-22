@@ -8,6 +8,7 @@ public:
         vector<vector<int>>dist(m,vector<int>(n,0));
         queue<pair<pair<int,int>,int>>q;
 
+        // Push all the cells which are 0 with dist=0
         for(int i=0;i<m;i++){
             for(int j=0;j<n;j++){
                 if(mat[i][j]==0){
@@ -15,7 +16,6 @@ public:
                     vis[i][j]=1;
                     dist[i][j]=0;
                 }
-                else vis[i][j]=0;
             }
         }
 
