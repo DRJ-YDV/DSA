@@ -17,21 +17,6 @@ public:
             int v=prerequisites[i][1];
             adj[v].push_back(u);
         }
-        // stack<int>s;
-        // for(int i=0;i<numCourses;i++){
-        //     if(!vis[i]){
-        //         dfs(i,vis,adj,s);
-        //     }
-        // }
-
-        // vector<int>ans;
-        // while(!s.empty()){
-        //     int temp=s.top();
-        //     s.pop();
-        //     ans.push_back(temp);
-        // }
-        // return ans;
-
         queue<int>q;
         vector<int>indegree(numCourses,0);
         for(int i=0;i<numCourses;i++){
