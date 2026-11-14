@@ -7,10 +7,8 @@ public:
             for(int j=i;j<nums.size();j++){
                 sum +=nums[j];
                 if(j-i+1 >= l && j-i+1 <=r){
-                    if(sum>0)
-                        ans=min(ans,sum);
+                    if(sum>0) ans=min(ans,sum);
                 }
-                // if(j-i+1>r) break;
             }
         }
         return ans==INT_MAX?-1:ans;
