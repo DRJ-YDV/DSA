@@ -6,8 +6,8 @@ public:
             int sum=0;
             for(int j=i;j<nums.size();j++){
                 sum +=nums[j];
-                if(j-i+1 >= l && j-i+1 <=r){
-                    if(sum>0) ans=min(ans,sum);
+                if(j-i+1 >= l && j-i+1 <=r && sum > 0){
+                    ans=min(ans,sum);
                 }
             }
         }
