@@ -2,7 +2,6 @@ class Solution {
 public:
     int minimizeSum(vector<int>& nums) {
         sort(nums.begin(),nums.end());
-        int mini=0,maxi=0;
         int n=nums.size();
         int ans=INT_MAX;
         if(n<4) return 0;
